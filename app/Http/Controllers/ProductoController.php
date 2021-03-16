@@ -9,7 +9,16 @@ use App\Models\Producto;
 
 class ProductoController extends Controller
 {
-    //
+    /**
+     * Listado de productos
+     */
+    public function index(){
+        return Producto::get();
+    }
+
+    /**
+     * Registro Producto
+     */
     public function registro(Request $request){
 
         $validator = [
@@ -48,6 +57,7 @@ class ProductoController extends Controller
         }
         
     }
+
 }
 
 
