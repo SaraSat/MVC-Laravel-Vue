@@ -24,7 +24,7 @@ class ProductoController extends Controller
         $validator = [
             'name' => 'required', 
             'description' => 'required',
-            'price' => 'numeric|required'
+            'price' => 'required'
         ];
 
         $message = [
@@ -41,13 +41,13 @@ class ProductoController extends Controller
                 'data' => $v->errors()
             ], 400);
         }else {
-            $procuto = [
+            $producto = [
                 'name' => $request->name,
                 'description' => $request->description,
                 'price' => $request->price
             ];
             
-            Producto::create($procuto);
+            Producto::create($producto);
 
             return response()->json([
                 'satatus' => 200,

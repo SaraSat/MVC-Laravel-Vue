@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/list', 'App\Http\Controllers\ProductoController@index');
 
+Route::post('/registro', 'App\Http\Controllers\ProductoController@registro');

@@ -21,7 +21,10 @@
 </head>
 <body>
     <div id="app">
+        <v-app >
             <inicio></inicio>
+        </v-app>
+            
         <main class="py-4">
             @yield('content')
         </main>

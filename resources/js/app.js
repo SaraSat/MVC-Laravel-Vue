@@ -30,6 +30,9 @@ Vue.component('inicio', require('./components/Inicio.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+const vuetify = new Vuetify();
+
 const app = new Vue({
     el: '#app',
+    vuetify
 });

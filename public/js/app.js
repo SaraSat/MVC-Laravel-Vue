@@ -1888,6 +1888,42 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'inicio',
   data: function data() {
@@ -1906,7 +1942,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         sortable: true
       }],
       search: '',
-      productos: []
+      productos: [],
+      name: '',
+      description: '',
+      price: '',
+      dialog: false
     };
   },
   created: function created() {
@@ -1914,7 +1954,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   methods: {
     listar: function listar() {
-      var _this = this;
+      var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         var res;
@@ -1927,7 +1967,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 2:
                 res = _context.sent;
-                _this.productos = res.data;
+                _this2.productos = res.data;
 
               case 4:
               case "end":
@@ -1938,7 +1978,44 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }))();
     },
     getFilter: function getFilter(value, search, item) {
-      return value != null && search != null && typeof value === 'string' && value.toString().toLocaleUpperCase().indexOf(search) !== -1;
+      return value != null && search != null && value.toString().toLocaleUpperCase().indexOf(search) !== -1;
+    },
+    agregar: function agregar() {
+      var _this3 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        var _this, res;
+
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _this = _this3;
+                _context2.next = 3;
+                return axios.post('registro', {
+                  name: _this.name,
+                  description: _this.description,
+                  price: _this.price
+                });
+
+              case 3:
+                res = _context2.sent;
+
+                if (res.status == 200) {
+                  _this.dialog = false;
+
+                  _this.listar();
+                }
+
+                console.log(res.status);
+
+              case 6:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
     }
   }
 });
@@ -1982,8 +2059,10 @@ Vue.component('inicio', __webpack_require__(/*! ./components/Inicio.vue */ "./re
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+var vuetify = new (vuetify__WEBPACK_IMPORTED_MODULE_0___default())();
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  vuetify: vuetify
 });
 
 /***/ }),
@@ -38712,10 +38791,171 @@ var render = function() {
                 attrs: {
                   headers: _vm.headers,
                   items: _vm.productos,
+                  "item-key": _vm.name,
+                  "items-per-page": 5,
                   search: _vm.search,
                   "custom-filter": _vm.getFilter
-                }
+                },
+                scopedSlots: _vm._u([
+                  {
+                    key: "top",
+                    fn: function() {
+                      return [
+                        _c(
+                          "v-card",
+                          [
+                            _c(
+                              "v-card-title",
+                              [
+                                _vm._v(
+                                  "\n                        Productos\n                        "
+                                ),
+                                _c("v-spacer"),
+                                _vm._v(" "),
+                                _c("v-text-field", {
+                                  staticClass: "mx-4",
+                                  attrs: {
+                                    "append-icon": "mdi-magnify",
+                                    "single-line": "",
+                                    label: "Search"
+                                  },
+                                  model: {
+                                    value: _vm.search,
+                                    callback: function($$v) {
+                                      _vm.search = $$v
+                                    },
+                                    expression: "search"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("v-spacer"),
+                                _vm._v(" "),
+                                _c(
+                                  "v-btn",
+                                  {
+                                    staticClass: "success",
+                                    on: {
+                                      click: function($event) {
+                                        _vm.dialog = true
+                                      }
+                                    }
+                                  },
+                                  [_vm._v("Agregar")]
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ]
+                    },
+                    proxy: true
+                  }
+                ])
               })
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-dialog",
+        {
+          model: {
+            value: _vm.dialog,
+            callback: function($$v) {
+              _vm.dialog = $$v
+            },
+            expression: "dialog"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c("v-card-title", [
+                _vm._v("\n                Nuevo producto\n            ")
+              ]),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                [
+                  _c(
+                    "v-form",
+                    [
+                      _c("v-text-field", {
+                        attrs: { label: "Nombre del producto" },
+                        model: {
+                          value: _vm.name,
+                          callback: function($$v) {
+                            _vm.name = $$v
+                          },
+                          expression: "name"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("v-text-field", {
+                        attrs: { label: "Descripción del producto" },
+                        model: {
+                          value: _vm.description,
+                          callback: function($$v) {
+                            _vm.description = $$v
+                          },
+                          expression: "description"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("v-text-field", {
+                        attrs: { label: "Precio del producto" },
+                        model: {
+                          value: _vm.price,
+                          callback: function($$v) {
+                            _vm.price = $$v
+                          },
+                          expression: "price"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-actions",
+                [
+                  _c(
+                    "v-btn",
+                    {
+                      staticClass: "success",
+                      on: {
+                        click: function($event) {
+                          return _vm.agregar()
+                        }
+                      }
+                    },
+                    [_vm._v("Agregar")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      staticClass: "error",
+                      on: {
+                        click: function($event) {
+                          _vm.dialog = false
+                        }
+                      }
+                    },
+                    [_vm._v("Cerrar")]
+                  )
+                ],
+                1
+              )
             ],
             1
           )
