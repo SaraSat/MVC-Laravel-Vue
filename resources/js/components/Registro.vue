@@ -76,9 +76,7 @@ export default {
 
         setErrors() {
             this.error = true;
-             console.log(this.errors.name?"Si":"no");
             this.errors.name ? (this.nameRule = "Nombre: " + this.errors.name.toString()) : this.nameRule = "" 
-            console.log(this.nameRule);
             this.errors.description ? this.descriptionRule = "Descripción: " + this.errors.description.toString() : this.descriptionRule = "" 
             this.errors.price ? this.priceRule = "Precio: " + this.errors.price.toString() : this.priceRule =  "";
         }
