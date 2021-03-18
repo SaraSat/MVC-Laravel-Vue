@@ -43,7 +43,7 @@
                 </v-data-table>
             </v-col>
         </v-row>
-        <Registro :dialog="dialog" v-if="dialog" @listar="listar()"></Registro>
+        <Registro :dialog="dialog" v-if="dialog" @listar="listar()" @cerrar="cerrar()"></Registro>
     </v-parallax>
 </template>
 
@@ -80,6 +80,10 @@ export default {
 
             this.productos = res.data;
         },
+
+        cerrar() {
+            this.dialog = false
+        }
 
     }
 }

@@ -1968,6 +1968,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
+    },
+    cerrar: function cerrar() {
+      this.dialog = false;
     }
   }
 });
@@ -39293,6 +39296,9 @@ var render = function() {
             on: {
               listar: function($event) {
                 return _vm.listar()
+              },
+              cerrar: function($event) {
+                return _vm.cerrar()
               }
             }
           })
@@ -39410,7 +39416,7 @@ var render = function() {
                   staticClass: "error",
                   on: {
                     click: function($event) {
-                      _vm.dialog = false
+                      return _vm.$emit("cerrar")
                     }
                   }
                 },

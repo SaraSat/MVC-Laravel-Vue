@@ -13,7 +13,7 @@
             </v-card-text>
             <v-card-actions>
                 <v-btn class="success" @click="agregar()">Agregar</v-btn>
-                <v-btn class="error" @click="dialog=false">Cerrar</v-btn>
+                <v-btn class="error" @click="$emit('cerrar')" >Cerrar</v-btn>
                 </v-card-actions>
             </v-card>
             <v-card class="error" v-model="error" v-if="error">
