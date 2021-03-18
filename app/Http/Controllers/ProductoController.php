@@ -24,7 +24,7 @@ class ProductoController extends Controller
         $validator = [
             'name' => 'required', 
             'description' => 'required',
-            'price' => 'required'
+            'price' => 'numeric|required'
         ];
 
         $message = [

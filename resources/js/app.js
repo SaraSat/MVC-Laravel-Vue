@@ -8,7 +8,10 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+import '@mdi/font/css/materialdesignicons.css';
+
 import Vuetify from 'vuetify';
+
 Vue.use(Vuetify);
 
 /**
@@ -30,7 +33,7 @@ Vue.component('inicio', require('./components/Inicio.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const vuetify = new Vuetify();
+ export const vuetify = new Vuetify();
 
 const app = new Vue({
     el: '#app',
