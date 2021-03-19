@@ -58,6 +58,61 @@ class ProductoController extends Controller
         
     }
 
+    public function editar( Request $request) {
+        $producto = Producto::where('id', $request->id)->first();
+
+        if($producto) {
+            $validator = [
+                'name' => 'required', 
+                'description' => 'required',
+                'price' => 'numeric|required'
+            ];
+    
+            $message = [
+                'required' => 'campo obligatorio',
+                'numeric' => 'campo numérico'
+            ];
+    
+            $v = Validator::make($request->all(), $validator, $message);
+
+            if($v->fails() == true) {
+                return response()->json([
+                    'satatus' => 400,
+                    'message' => 'Error -> el producto no se ha podido actualizar',
+                    'data' => $v->errors()
+                ], 400);                
+            }else {
+                $producto->update([
+                    'name' => $request->name,
+                    'description' => $request->description,
+                    'price' => $request->price
+                ]);
+
+                return response()->json([
+                    'satatus' => 200,
+                    'message' => 'Success -> El producto se ha actualizado correctamente',
+                    'data' => $producto
+                ], 200);
+                
+            }
+        }else {
+            return response()->json([
+                'satatus' => 400,
+                'message' => 'Error -> Ha habido un error, el producto con '. $request->id. " no se encuentra",
+                'data' => null 
+            ], 400);
+
+        }
+
+    }
+
+    public function getProducto(Request $request) {
+        $producto = Producto::where('id', $request->id)->first();
+        
+        return $producto;
+
+    }
+
 }
 
 
