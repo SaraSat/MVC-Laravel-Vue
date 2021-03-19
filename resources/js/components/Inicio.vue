@@ -1,7 +1,8 @@
 
 
 <template>
-    <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" id="parrallax">
+<v-content>
+    <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" height="100%">
         <v-row>
             <v-col class="col col-12" id="title">
                 <h1>Gestión de Productos</h1>
@@ -45,15 +46,21 @@
         </v-row>
         <Registro :dialog="dialog" v-if="dialog" @listar="listar()" @cerrar="cerrar()"></Registro>
     </v-parallax>
+    <Footer></Footer>
+ 
+</v-content>
+    
 </template>
 
 <script>
 import Registro from './Registro.vue';
+import Footer from './Footer.vue';
 
 export default {
     name: 'inicio', 
     components: {
-        Registro
+        Registro,
+        Footer
     },
 
     data() {
@@ -97,8 +104,7 @@ export default {
  }
 
  .v-parallax {
-     height: 100vh;
-     margin-top: 5%;
+     position: static !important
  }
 
  #table-col {
