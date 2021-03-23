@@ -98,7 +98,7 @@ class ProductoController extends Controller
         }else {
             return response()->json([
                 'satatus' => 400,
-                'message' => 'Error -> Ha habido un error, el producto con '. $request->id. " no se encuentra",
+                'message' => 'Error -> Ha habido un error, el producto con id '. $request->id. " no existe",
                 'data' => 'El id '.$request->id.' no existe'
             ], 400);
 
@@ -111,6 +111,27 @@ class ProductoController extends Controller
         
         return $producto;
 
+    }
+
+    public function deletProducto($id) {
+        $producto = Producto:: where('id', $id)->first();
+
+        if($producto) {
+            $producto->delete();
+
+            return response()->json([
+                'satatus' => 200,
+                'message' => 'Success -> El producto se ha borrado correctamente',
+                'data' => null
+            ], 200);
+        }else {
+            return response()->json([
+                'satatus' => 400,
+                'message' => 'Error -> Ha habido un error, el producto con '. $id. " no se encuentra",
+                'data' => 'El id '.$id.' no existe'
+            ], 400);
+
+        }
     }
 
 }

@@ -2,7 +2,7 @@
         <v-dialog v-model="dialog">
         <v-card>
             <v-card-title>
-                Nuevo producto
+                Edición producto
             </v-card-title>
             <v-card-text>
                 <v-form>
@@ -12,7 +12,7 @@
                 </v-form>
             </v-card-text>
             <v-card-actions>
-                <v-btn class="success" @click="editar()">Agregar</v-btn>
+                <v-btn class="success" @click="editar()">Editar</v-btn>
                 <v-btn class="error" @click="$emit('cerrar')" >Cerrar</v-btn>
                 </v-card-actions>
             </v-card>
@@ -63,7 +63,6 @@ export default {
         async editar() {
            var _this = this
           _this.errors = []
-           console.log(_this.item.name)
             try {
                 await axios.post('edicion', {
                     id: _this.item.id,
@@ -77,8 +76,7 @@ export default {
                 _this.error = false;
 
             } catch(e) {
-                console.log(e)
-                _this.errors = e.response.data.data
+                _this.errors = e.response.data
                 _this.setErrors();
             }
 
@@ -86,10 +84,10 @@ export default {
 
         setErrors() {
             this.error = true;
-            this.idRule = typeof this.errors == 'string' ? "id: " + this.errors : ""
-            this.nameRule =  this.errors.name ?  "Nombre: " + this.errors.name.toString() :  "" 
-            this.descriptionRule = this.errors.description ? "Descripción: " + this.errors.description.toString() : "" 
-            this.priceRule = this.errors.price ? "Precio: " + this.errors.price.toString() :  "";
+            this.idRule = typeof this.errors.data == 'string' ? "id: " + this.errors.message : ""
+            this.nameRule =  this.errors.data.name ?  "Nombre: " + this.errors.data.name.toString() :  "" 
+            this.descriptionRule = this.errors.data.description ? "Descripción: " + this.errors.data.description.toString() : "" 
+            this.priceRule = this.errors.data.price ? "Precio: " + this.errors.data.price.toString() :  "";
         }, 
         
     },

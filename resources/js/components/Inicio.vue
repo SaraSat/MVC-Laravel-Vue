@@ -62,6 +62,7 @@
         </v-row>
         <Registro :dialog="dialog" v-if="dialog" @listar="listar()" @cerrar="cerrar()"></Registro>
         <Edicion :dialog="dialog2" :item="product" v-if="dialog2" @listar="listar()" @cerrar="cerrar()"></Edicion>
+        <Borrar :dialog="dialog3" :item="product" v-if="dialog3" @listar="listar()" @cerrar="cerrar()"></Borrar>
     </v-parallax>
     <Footer></Footer>
  
@@ -73,13 +74,15 @@
 import Registro from './Registro.vue';
 import Edicion from './Edicion.vue';
 import Footer from './Footer.vue';
+import Borrar from './Borrar.vue';
 
 export default {
     name: 'inicio', 
     components: {
         Registro,
         Footer,
-        Edicion
+        Edicion,
+        Borrar
     },
 
     data() {
@@ -96,6 +99,7 @@ export default {
             productos: [],
             dialog:false,
             dialog2: false,
+            dialog3: false,
         }
     },  
 
@@ -113,13 +117,20 @@ export default {
         cerrar() {
             this.dialog = false
             this.dialog2 = false
+            this.dialog3 = false
         }, 
 
         editItem(item) {
             this.product = item
             this.dialog2 = true
 
+        },
+        deleteItem(item) {
+            this.product = item
+            this.dialog3 = true
+
         }
+
 
     }
 }
