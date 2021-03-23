@@ -41,10 +41,27 @@
                          </v-card-title>
                      </v-card>
                 </template>
+                <template v-slot:item.actions="{ item }">
+                    <v-icon
+                        small
+                        class="mr-2"
+                        @click="editItem(item)"
+                        
+                    >
+                        mdi-pencil
+                    </v-icon>
+                    <v-icon
+                        small
+                        @click="deleteItem(item)"
+                    >
+                        mdi-delete
+                    </v-icon>
+                </template>
                 </v-data-table>
             </v-col>
         </v-row>
         <Registro :dialog="dialog" v-if="dialog" @listar="listar()" @cerrar="cerrar()"></Registro>
+        <Edicion :dialog="dialog2" :item="product" v-if="dialog2" @listar="listar()" @cerrar="cerrar()"></Edicion>
     </v-parallax>
     <Footer></Footer>
  
@@ -54,13 +71,15 @@
 
 <script>
 import Registro from './Registro.vue';
+import Edicion from './Edicion.vue';
 import Footer from './Footer.vue';
 
 export default {
     name: 'inicio', 
     components: {
         Registro,
-        Footer
+        Footer,
+        Edicion
     },
 
     data() {
@@ -68,12 +87,15 @@ export default {
             headers: [
                 {text: 'Nombre', value:'name', sortable:true, filterable: true},
                 {tex: 'Descripción', value: 'description', sortable:false},
-                {text: 'Precio', value: 'price', sortable:true}
+                {text: 'Precio', value: 'price', sortable:true},
+                {text: 'acciones', value: 'actions', sortable: false}
             ], 
 
+            product:{},
             search: '', 
             productos: [],
             dialog:false,
+            dialog2: false,
         }
     },  
 
@@ -90,6 +112,13 @@ export default {
 
         cerrar() {
             this.dialog = false
+            this.dialog2 = false
+        }, 
+
+        editItem(item) {
+            this.product = item
+            this.dialog2 = true
+
         }
 
     }

@@ -99,7 +99,7 @@ class ProductoController extends Controller
             return response()->json([
                 'satatus' => 400,
                 'message' => 'Error -> Ha habido un error, el producto con '. $request->id. " no se encuentra",
-                'data' => null 
+                'data' => 'El id '.$request->id.' no existe'
             ], 400);
 
         }
