@@ -21,8 +21,8 @@
 </head>
 <body>
         <v-app id="app">
-
-            <inicio></inicio>        
+            
+            <inicio></inicio> 
         </v-app>
             
 

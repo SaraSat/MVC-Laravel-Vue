@@ -72,6 +72,7 @@ export default {
                 });
 
                 _this.$emit('listar');
+                _this.$emit('cerrar');
                 _this.dialog = false;
                 _this.error = false;
 
