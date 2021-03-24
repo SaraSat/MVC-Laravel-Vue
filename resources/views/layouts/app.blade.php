@@ -21,9 +21,9 @@
 </head>
 <body>
         <v-app id="app">
-            
+
             <inicio></inicio> 
-            <footerr></footerr>
+            
         </v-app>
         
             

@@ -4,7 +4,8 @@
    
     <v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" height="100%"
       jumbotron>
-       <v-row>
+      <v-layout column>
+        <v-row>
             <v-col class="col col-12" id="title" >
             <h1>Gestión de Productos</h1>
             </v-col> 
@@ -64,11 +65,14 @@
         <Edicion :dialog="dialog2" :item="product" v-if="dialog2" @listar="listar()" @cerrar="cerrar()"></Edicion>
         <Borrar :dialog="dialog3" :item="product" v-if="dialog3" @listar="listar()" @cerrar="cerrar()"></Borrar>
     
+    <Footer></Footer>
+      </v-layout>
     </v-parallax> 
 
 </template>
 
 <script>
+import Footer from './Footer.vue';
 import Registro from './Registro.vue';
 import Edicion from './Edicion.vue';
 import Borrar from './Borrar.vue';
@@ -79,6 +83,7 @@ export default {
         Registro,
         Edicion,
         Borrar,
+        Footer
     },
 
     data() {
@@ -135,10 +140,12 @@ export default {
 
 <style>
 .v-parallax {
+    position: relative;
     height: 100%;
-    background-attachment:fixed;
     background-size: 100% auto;
-}
+    overflow-x: hidden;
+    overflow-y: scroll;
+    }
 .row {
     height: 100%;
 }

@@ -2143,9 +2143,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Registro_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Registro.vue */ "./resources/js/components/Registro.vue");
-/* harmony import */ var _Edicion_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Edicion.vue */ "./resources/js/components/Edicion.vue");
-/* harmony import */ var _Borrar_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Borrar.vue */ "./resources/js/components/Borrar.vue");
+/* harmony import */ var _Footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.vue */ "./resources/js/components/Footer.vue");
+/* harmony import */ var _Registro_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Registro.vue */ "./resources/js/components/Registro.vue");
+/* harmony import */ var _Edicion_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Edicion.vue */ "./resources/js/components/Edicion.vue");
+/* harmony import */ var _Borrar_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Borrar.vue */ "./resources/js/components/Borrar.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2222,15 +2223,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'inicio',
   components: {
-    Registro: _Registro_vue__WEBPACK_IMPORTED_MODULE_1__.default,
-    Edicion: _Edicion_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    Borrar: _Borrar_vue__WEBPACK_IMPORTED_MODULE_3__.default
+    Registro: _Registro_vue__WEBPACK_IMPORTED_MODULE_2__.default,
+    Edicion: _Edicion_vue__WEBPACK_IMPORTED_MODULE_3__.default,
+    Borrar: _Borrar_vue__WEBPACK_IMPORTED_MODULE_4__.default,
+    Footer: _Footer_vue__WEBPACK_IMPORTED_MODULE_1__.default
   },
   data: function data() {
     return {
@@ -7052,7 +7058,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.v-parallax {\r\n    height: 100%;\r\n    background-attachment:fixed;\r\n    background-size: 100% auto;\n}\n.row {\r\n    height: 100%;\n}\n#title {\r\n     text-align: center;\r\n     margin-top: 5%;\r\n     height: 10%;\r\n     color: white;\n}\n#table-col {\r\n     margin-left: 25%;\r\n     height: 100%;\r\n     margin-bottom: 5%\n}\r\n\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.v-parallax {\r\n    position: relative;\r\n    height: 100%;\r\n    background-size: 100% auto;\r\n    overflow-x: hidden;\r\n    overflow-y: scroll;\n}\n.row {\r\n    height: 100%;\n}\n#title {\r\n     text-align: center;\r\n     margin-top: 5%;\r\n     height: 10%;\r\n     color: white;\n}\n#table-col {\r\n     margin-left: 25%;\r\n     height: 100%;\r\n     margin-bottom: 5%\n}\r\n\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40119,7 +40125,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-footer",
-    { attrs: { padless: "", sticky: "" } },
+    { attrs: { padless: "", fixed: "" } },
     [
       _c(
         "v-card",
@@ -40218,10 +40224,10 @@ var render = function() {
                 "a",
                 {
                   attrs: {
-                    href: "https://venngage.com/blog/simple-backgrounds/"
+                    href: "https://vuetifyjs.com/en/components/parallax/"
                   }
                 },
-                [_vm._v("https://venngage.com/blog/simple-backgrounds/")]
+                [_vm._v("https://vuetifyjs.com/en/components/parallax/")]
               )
             ])
           ])
@@ -40266,180 +40272,191 @@ var render = function() {
     },
     [
       _c(
-        "v-row",
+        "v-layout",
+        { attrs: { column: "" } },
         [
-          _c("v-col", { staticClass: "col col-12", attrs: { id: "title" } }, [
-            _c("h1", [_vm._v("Gestión de Productos")])
-          ]),
-          _vm._v(" "),
           _c(
-            "v-col",
-            { staticClass: "col col-6", attrs: { id: "table-col" } },
+            "v-row",
             [
-              _c("v-data-table", {
-                staticClass: "elevation-1",
-                attrs: {
-                  headers: _vm.headers,
-                  items: _vm.productos,
-                  "items-per-page": 5,
-                  search: _vm.search,
-                  dense: "",
-                  "footer-props": {
-                    showFirstLastPage: true,
-                    firstIcon: "mdi-arrow-collapse-left",
-                    lastIcon: "mdi-arrow-collapse-right",
-                    prevIcon: "mdi-minus",
-                    nextIcon: "mdi-plus"
-                  }
-                },
-                scopedSlots: _vm._u([
-                  {
-                    key: "top",
-                    fn: function() {
-                      return [
-                        _c(
-                          "v-card",
-                          [
+              _c(
+                "v-col",
+                { staticClass: "col col-12", attrs: { id: "title" } },
+                [_c("h1", [_vm._v("Gestión de Productos")])]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { staticClass: "col col-6", attrs: { id: "table-col" } },
+                [
+                  _c("v-data-table", {
+                    staticClass: "elevation-1",
+                    attrs: {
+                      headers: _vm.headers,
+                      items: _vm.productos,
+                      "items-per-page": 5,
+                      search: _vm.search,
+                      dense: "",
+                      "footer-props": {
+                        showFirstLastPage: true,
+                        firstIcon: "mdi-arrow-collapse-left",
+                        lastIcon: "mdi-arrow-collapse-right",
+                        prevIcon: "mdi-minus",
+                        nextIcon: "mdi-plus"
+                      }
+                    },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "top",
+                        fn: function() {
+                          return [
                             _c(
-                              "v-card-title",
+                              "v-card",
                               [
-                                _vm._v(
-                                  "\n                        Productos\n                        "
-                                ),
-                                _c("v-spacer"),
-                                _vm._v(" "),
-                                _c("v-text-field", {
-                                  staticClass: "mx-4",
-                                  attrs: {
-                                    "append-icon": "mdi-magnify",
-                                    "single-line": "",
-                                    label: "Search"
-                                  },
-                                  model: {
-                                    value: _vm.search,
-                                    callback: function($$v) {
-                                      _vm.search = $$v
-                                    },
-                                    expression: "search"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("v-spacer"),
-                                _vm._v(" "),
                                 _c(
-                                  "v-btn",
-                                  {
-                                    staticClass: "success",
-                                    on: {
-                                      click: function($event) {
-                                        _vm.dialog = true
+                                  "v-card-title",
+                                  [
+                                    _vm._v(
+                                      "\n                        Productos\n                        "
+                                    ),
+                                    _c("v-spacer"),
+                                    _vm._v(" "),
+                                    _c("v-text-field", {
+                                      staticClass: "mx-4",
+                                      attrs: {
+                                        "append-icon": "mdi-magnify",
+                                        "single-line": "",
+                                        label: "Search"
+                                      },
+                                      model: {
+                                        value: _vm.search,
+                                        callback: function($$v) {
+                                          _vm.search = $$v
+                                        },
+                                        expression: "search"
                                       }
-                                    }
-                                  },
-                                  [_vm._v("Agregar")]
+                                    }),
+                                    _vm._v(" "),
+                                    _c("v-spacer"),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-btn",
+                                      {
+                                        staticClass: "success",
+                                        on: {
+                                          click: function($event) {
+                                            _vm.dialog = true
+                                          }
+                                        }
+                                      },
+                                      [_vm._v("Agregar")]
+                                    )
+                                  ],
+                                  1
                                 )
                               ],
                               1
                             )
-                          ],
-                          1
-                        )
-                      ]
-                    },
-                    proxy: true
-                  },
-                  {
-                    key: "item.actions",
-                    fn: function(ref) {
-                      var item = ref.item
-                      return [
-                        _c(
-                          "v-icon",
-                          {
-                            staticClass: "mr-2",
-                            attrs: { small: "" },
-                            on: {
-                              click: function($event) {
-                                return _vm.editItem(item)
-                              }
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "\n                    mdi-pencil\n                "
+                          ]
+                        },
+                        proxy: true
+                      },
+                      {
+                        key: "item.actions",
+                        fn: function(ref) {
+                          var item = ref.item
+                          return [
+                            _c(
+                              "v-icon",
+                              {
+                                staticClass: "mr-2",
+                                attrs: { small: "" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.editItem(item)
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                    mdi-pencil\n                "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "v-icon",
+                              {
+                                attrs: { small: "" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.deleteItem(item)
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                    mdi-delete\n                "
+                                )
+                              ]
                             )
                           ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "v-icon",
-                          {
-                            attrs: { small: "" },
-                            on: {
-                              click: function($event) {
-                                return _vm.deleteItem(item)
-                              }
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "\n                    mdi-delete\n                "
-                            )
-                          ]
-                        )
-                      ]
-                    }
-                  }
-                ])
-              })
+                        }
+                      }
+                    ])
+                  })
+                ],
+                1
+              )
             ],
             1
-          )
+          ),
+          _vm._v(" "),
+          _vm.dialog
+            ? _c("Registro", {
+                attrs: { dialog: _vm.dialog },
+                on: {
+                  listar: function($event) {
+                    return _vm.listar()
+                  },
+                  cerrar: function($event) {
+                    return _vm.cerrar()
+                  }
+                }
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.dialog2
+            ? _c("Edicion", {
+                attrs: { dialog: _vm.dialog2, item: _vm.product },
+                on: {
+                  listar: function($event) {
+                    return _vm.listar()
+                  },
+                  cerrar: function($event) {
+                    return _vm.cerrar()
+                  }
+                }
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.dialog3
+            ? _c("Borrar", {
+                attrs: { dialog: _vm.dialog3, item: _vm.product },
+                on: {
+                  listar: function($event) {
+                    return _vm.listar()
+                  },
+                  cerrar: function($event) {
+                    return _vm.cerrar()
+                  }
+                }
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _c("Footer")
         ],
         1
-      ),
-      _vm._v(" "),
-      _vm.dialog
-        ? _c("Registro", {
-            attrs: { dialog: _vm.dialog },
-            on: {
-              listar: function($event) {
-                return _vm.listar()
-              },
-              cerrar: function($event) {
-                return _vm.cerrar()
-              }
-            }
-          })
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.dialog2
-        ? _c("Edicion", {
-            attrs: { dialog: _vm.dialog2, item: _vm.product },
-            on: {
-              listar: function($event) {
-                return _vm.listar()
-              },
-              cerrar: function($event) {
-                return _vm.cerrar()
-              }
-            }
-          })
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.dialog3
-        ? _c("Borrar", {
-            attrs: { dialog: _vm.dialog3, item: _vm.product },
-            on: {
-              listar: function($event) {
-                return _vm.listar()
-              },
-              cerrar: function($event) {
-                return _vm.cerrar()
-              }
-            }
-          })
-        : _vm._e()
+      )
     ],
     1
   )

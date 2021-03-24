@@ -1,5 +1,5 @@
 <template>
-    <v-footer  padless sticky>
+    <v-footer  padless fixed="">
       <v-card flat tile class="red lighten-1 text-center" width="100%">
         <v-card-text> 
           <v-btn icon href="https://www.facebook.com/La-Luna-1575189982738297"><v-icon color="blue" >mdi-facebook</v-icon></v-btn>
@@ -15,7 +15,7 @@
 
         <v-card-text class="white--text">
           {{ new Date().getFullYear() }} — <strong>Sara Álvarez Turrión</strong><br>
-          <span id="cita"> background image : <a href="https://venngage.com/blog/simple-backgrounds/">https://venngage.com/blog/simple-backgrounds/</a></span>
+          <span id="cita"> background image : <a href="https://vuetifyjs.com/en/components/parallax/">https://vuetifyjs.com/en/components/parallax/</a></span>
         </v-card-text>
       </v-card>
     </v-footer>
