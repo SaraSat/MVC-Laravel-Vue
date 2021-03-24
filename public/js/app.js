@@ -2143,10 +2143,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.vue */ "./resources/js/components/Footer.vue");
-/* harmony import */ var _Registro_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Registro.vue */ "./resources/js/components/Registro.vue");
-/* harmony import */ var _Edicion_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Edicion.vue */ "./resources/js/components/Edicion.vue");
-/* harmony import */ var _Borrar_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Borrar.vue */ "./resources/js/components/Borrar.vue");
+/* harmony import */ var _Registro_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Registro.vue */ "./resources/js/components/Registro.vue");
+/* harmony import */ var _Edicion_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Edicion.vue */ "./resources/js/components/Edicion.vue");
+/* harmony import */ var _Borrar_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Borrar.vue */ "./resources/js/components/Borrar.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2223,22 +2222,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'inicio',
   components: {
-    Registro: _Registro_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    Edicion: _Edicion_vue__WEBPACK_IMPORTED_MODULE_3__.default,
-    Borrar: _Borrar_vue__WEBPACK_IMPORTED_MODULE_4__.default,
-    Footer: _Footer_vue__WEBPACK_IMPORTED_MODULE_1__.default
+    Registro: _Registro_vue__WEBPACK_IMPORTED_MODULE_1__.default,
+    Edicion: _Edicion_vue__WEBPACK_IMPORTED_MODULE_2__.default,
+    Borrar: _Borrar_vue__WEBPACK_IMPORTED_MODULE_3__.default
   },
   data: function data() {
     return {
@@ -2477,6 +2469,7 @@ Vue.use((vuetify__WEBPACK_IMPORTED_MODULE_1___default()));
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('inicio', __webpack_require__(/*! ./components/Inicio.vue */ "./resources/js/components/Inicio.vue").default);
+Vue.component('footerr', __webpack_require__(/*! ./components/Footer.vue */ "./resources/js/components/Footer.vue").default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -7059,7 +7052,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.v-parallax {\r\n    height: 100%;\n}\n#title {\r\n     text-align: center;\r\n     margin-top: 5%;\r\n     height: 10%;\r\n     color: white;\n}\n#table-col {\r\n     margin-left: 25%;\r\n     height: 100%;\n}\n#footer {\r\n     height: 100%;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.v-parallax {\r\n    height: 100%;\r\n    background-attachment:fixed;\r\n    background-size: 100% auto;\n}\n.row {\r\n    height: 100%;\n}\n#title {\r\n     text-align: center;\r\n     margin-top: 5%;\r\n     height: 10%;\r\n     color: white;\n}\n#table-col {\r\n     margin-left: 25%;\r\n     height: 100%;\r\n     margin-bottom: 5%\n}\r\n\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -40126,7 +40119,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-footer",
-    { attrs: { padless: "", fixed: "" } },
+    { attrs: { padless: "", sticky: "" } },
     [
       _c(
         "v-card",
@@ -40403,13 +40396,6 @@ var render = function() {
             1
           )
         ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-row",
-        { attrs: { id: "footer" } },
-        [_c("v-col", { staticClass: "col col-12" }, [_c("Footer")], 1)],
         1
       ),
       _vm._v(" "),

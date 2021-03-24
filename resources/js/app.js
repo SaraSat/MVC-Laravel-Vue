@@ -26,6 +26,7 @@ Vue.use(Vuetify);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('inicio', require('./components/Inicio.vue').default);
+Vue.component('footerr', require('./components/Footer.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

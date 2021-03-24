@@ -60,11 +60,6 @@
             </v-col> 
                  
         </v-row> 
-        <v-row id="footer">
-            <v-col class="col col-12">
-                <Footer></Footer> 
-            </v-col>
-        </v-row>
         <Registro :dialog="dialog" v-if="dialog" @listar="listar()" @cerrar="cerrar()"></Registro>
         <Edicion :dialog="dialog2" :item="product" v-if="dialog2" @listar="listar()" @cerrar="cerrar()"></Edicion>
         <Borrar :dialog="dialog3" :item="product" v-if="dialog3" @listar="listar()" @cerrar="cerrar()"></Borrar>
@@ -74,7 +69,6 @@
 </template>
 
 <script>
-import Footer from './Footer.vue';
 import Registro from './Registro.vue';
 import Edicion from './Edicion.vue';
 import Borrar from './Borrar.vue';
@@ -85,7 +79,6 @@ export default {
         Registro,
         Edicion,
         Borrar,
-        Footer
     },
 
     data() {
@@ -143,6 +136,11 @@ export default {
 <style>
 .v-parallax {
     height: 100%;
+    background-attachment:fixed;
+    background-size: 100% auto;
+}
+.row {
+    height: 100%;
 }
  #title {
      text-align: center;
@@ -154,11 +152,9 @@ export default {
  #table-col {
      margin-left: 25%;
      height: 100%;
+     margin-bottom: 5%
 
  }
 
- #footer {
-     height: 100%;
- }
 
 </style>
