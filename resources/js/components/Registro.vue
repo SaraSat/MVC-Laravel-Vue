@@ -77,9 +77,9 @@ export default {
 
         setErrors() {
             this.error = true;
-            this.errors.name ? (this.nameRule = "Nombre: " + this.errors.name.toString()) : this.nameRule = "" 
-            this.errors.description ? this.descriptionRule = "Descripción: " + this.errors.description.toString() : this.descriptionRule = "" 
-            this.errors.price ? this.priceRule = "Precio: " + this.errors.price.toString() : this.priceRule =  "";
+            this.nameRule = this.errors.name ? "Nombre: " + this.errors.name.toString(): "" 
+            this.descriptionRule = this.errors.description ? "Descripción: " + this.errors.description.toString() : "" 
+            this.priceRule = this.errors.price ? "Precio: " + this.errors.price.toString() : "";
         }
 
     },
