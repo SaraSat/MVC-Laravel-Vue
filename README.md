@@ -12,32 +12,28 @@ Validación y control de errores. <br>
 </p>
 
 ## Inicio: 
-<img src="imagesReadme/inicio.PNG"  height=600 width=800>
 
-![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/inicio.PNG?"Imagen Inicio")
+![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/inicio.PNG "Imagen Inicio")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Inicio.vue "Código")
 
 <br>
 
 ## Registro: 
-<img src="imagesReadme/registro.PNG"  height=600 width=800>
 
-![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/registro.PNG? "Imagen Registro")
+![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/registro.PNG "Imagen Registro")
 
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Registro.vue "Código")
 <br>
 
 ## Edicion: 
-<img src="imagesReadme/edicion.PNG"  height=600 width=800>
 
-![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/edicion.PNG? "Imagen Edicion")
+![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/edicion.PNG "Imagen Edicion")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Edicion.vue "Código")
 <br>
 
 ## Eliminacion: 
-<img src="imagesReadme/eliminacion.PNG"  height=600 width=800>
 
-![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/eliminacion.PNG? "Imagen Eliminacion")
+![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/eliminacion.PNG "Imagen Eliminacion")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Borrar.vue "Código")
 
 ## Laravel: 
