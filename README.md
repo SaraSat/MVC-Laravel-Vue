@@ -13,7 +13,7 @@ Validación y control de errores. <br>
 
 ## Inicio: 
 <img src="imagesReadme/inicio.PNG"  height=600 width=800>
-![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/inicio.PNG "Imagen Inicio")
+![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/inicio.PNG?raw=true "Imagen Inicio")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Inicio.vue "Código")
 
 <br>
