@@ -10,3 +10,8 @@ Validación y control de errores. <br>
     En ProductoController se encuentran los métodos necesarios para la gestión del producto, registralo, editarlo, eliminarlo y listar. <br>
     En cada método se realiza una validación con control de errores que se mostrará en la vista correspondiente
 </p>
+
+## Inicio: 
+<img src="imagesReadme/inicio.PNG"  height=400 width=800>
+Imagen: ![Imagen Inicio](https://github.com/SaraSat/Aplicacion-Vue-LaLuna/tree/master/imagesReadme/inicio.PNG?raw=true "Inicio")
+Código: ![Código Inicio.vue](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Inicio.vue)
