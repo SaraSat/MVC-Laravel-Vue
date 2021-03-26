@@ -20,19 +20,22 @@ Validación y control de errores. <br>
 
 ## Registro: 
 <img src="imagesReadme/registro.PNG"  height=600 width=800>
-![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/registro.PNG "Imagen Registro")
+
+![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/registro.PNG?raw=true  "Imagen Registro")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Registro.vue "Código")
 <br>
 
 ## Edicion: 
 <img src="imagesReadme/edicion.PNG"  height=600 width=800>
-![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/edicion.PNG "Imagen Edicion")
+
+![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/edicion.PNG?raw=true  "Imagen Edicion")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Edicion.vue "Código")
 <br>
 
 ## Eliminacion: 
 <img src="imagesReadme/eliminacion.PNG"  height=600 width=800>
-![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/eliminacion.PNG "Imagen Eliminacion")
+
+![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/eliminacion.PNG?raw=true  "Imagen Eliminacion")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Borrar.vue "Código")
 
 ## Laravel: [Ver Código Php](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/app/Http/Controllers/ProductoController.php "Código" Php)
