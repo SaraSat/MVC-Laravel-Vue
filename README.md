@@ -39,3 +39,9 @@ Validación y control de errores. <br>
 ## Laravel: 
 
 [Ver Código Php](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/app/Http/Controllers/ProductoController.php "Código Php" )
+
+Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+          licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+  <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"/>
+</a> 
