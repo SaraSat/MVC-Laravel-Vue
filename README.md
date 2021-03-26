@@ -15,6 +15,7 @@ Validación y control de errores. <br>
 <img src="imagesReadme/inicio.PNG"  height=400 width=800>
 ![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/inicio.PNG "Imagen Inicio")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Inicio.vue "Código)
+
 <br>
 
 ## Registro: 
@@ -33,3 +34,5 @@ Validación y control de errores. <br>
 <img src="imagesReadme/eliminacion.PNG"  height=400 width=800>
 ![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/eliminacion.PNG "Imagen Eliminacion")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Borrar.vue "Código)
+
+## Laravel: [Ver Código Php](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/app/Http/Controllers/ProductoController.php "Código Php)
