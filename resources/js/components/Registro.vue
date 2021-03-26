@@ -69,7 +69,7 @@ export default {
                 _this.error = false;
 
             } catch(e) {
-                _this.errors = e.response.data.data
+                _this.errors = e.response.data
                 _this.setErrors();
             }
 
@@ -77,10 +77,9 @@ export default {
 
         setErrors() {
             this.error = true;
-            this.nameRule = this.errors.name ? "Nombre: " + this.errors.name.toString(): "" 
-            this.descriptionRule = this.errors.description ? "Descripción: " + this.errors.description.toString() : "" 
-            this.priceRule = this.errors.price ? "Precio: " + this.errors.price.toString() : "";
-        }
+            this.nameRule =  this.errors.data.name ?  "Nombre: " + this.errors.data.name.toString() :  "" 
+            this.descriptionRule = this.errors.data.description ? "Descripción: " + this.errors.data.description.toString() : "" 
+            this.priceRule = this.errors.data.price ? "Precio: " + this.errors.data.price.toString() :  "";        }
 
     },
 }

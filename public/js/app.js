@@ -2416,7 +2416,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 11:
                 _context.prev = 11;
                 _context.t0 = _context["catch"](2);
-                _this.errors = _context.t0.response.data.data;
+                _this.errors = _context.t0.response.data;
 
                 _this.setErrors();
 
@@ -2430,9 +2430,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     setErrors: function setErrors() {
       this.error = true;
-      this.errors.name ? this.nameRule = "Nombre: " + this.errors.name.toString() : this.nameRule = "";
-      this.errors.description ? this.descriptionRule = "Descripción: " + this.errors.description.toString() : this.descriptionRule = "";
-      this.errors.price ? this.priceRule = "Precio: " + this.errors.price.toString() : this.priceRule = "";
+      this.nameRule = this.errors.data.name ? "Nombre: " + this.errors.data.name.toString() : "";
+      this.descriptionRule = this.errors.data.description ? "Descripción: " + this.errors.data.description.toString() : "";
+      this.priceRule = this.errors.data.price ? "Precio: " + this.errors.data.price.toString() : "";
     }
   }
 });
