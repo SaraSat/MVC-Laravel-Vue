@@ -13,5 +13,5 @@ Validación y control de errores. <br>
 
 ## Inicio: 
 <img src="imagesReadme/inicio.PNG"  height=400 width=800>
-[ Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/inicio.PNG)
-Código: https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Inicio.vue
+![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/inicio.PNG "Imagen Inicio")
+[Código: ](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Inicio.vue "Código)
