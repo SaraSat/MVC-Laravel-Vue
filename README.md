@@ -38,4 +38,6 @@ Validación y control de errores. <br>
 ![Ver Imagen](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/imagesReadme/eliminacion.PNG?raw=true  "Imagen Eliminacion")
 [Ver Código](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/resources/js/components/Borrar.vue "Código")
 
-## Laravel: [Ver Código Php](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/app/Http/Controllers/ProductoController.php "Código" Php)
+## Laravel: 
+
+[Ver Código Php](https://github.com/SaraSat/MVC-Laravel-Vue/blob/master/app/Http/Controllers/ProductoController.php "Código" Php)
